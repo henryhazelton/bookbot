@@ -5,7 +5,7 @@ def main():
     book_text = read_the_book(book_path)
     print(book_text)
     number_of_words = count_words(book_text)
-    print(f"{number_of_words} words found in this document")
+    print(f"{number_of_words} words found in the document")
     number_of_letters = count_letters(book_text)
     print(number_of_letters)
     list = sort_dictionary(book_text)
