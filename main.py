@@ -3,10 +3,7 @@ from stats import count_letters
 import sys
 
 def main():
-    if len(sys.argv) != 2:
-        print("Usage: python3 main.py <path_to_book>")
-        sys.exit(1)
-    book_path = sys.argv[1]
+
     book_text = read_the_book(book_path)
     print(book_text)
     number_of_words = count_words(book_text)
