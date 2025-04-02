@@ -1,3 +1,5 @@
+from stats import count_words
+
 def main():
     book_path = "books/frankenstein.txt"
     book_text = read_the_book(book_path)
@@ -37,10 +39,6 @@ def count_letters(book_text):
         else:
             character_dict[character] += 1
     return character_dict
-
-def count_words(book_text):
-    words_in_text = book_text.split()
-    return len(words_in_text)
 
 
 def  read_the_book(book):
