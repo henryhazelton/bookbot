@@ -2,6 +2,7 @@ from stats import count_words
 from stats import count_letters
 import sys
 
+
 def main():
     if len(sys.argv) != 2:
         print("Usage: python3 main.py <path_to_book>")
@@ -14,7 +15,7 @@ def main():
 
     list = sort_dictionary(book_text)
     construct_report(book_path, book_text)
-    
+
 
 def construct_report(book_path, book_text):
     character_list = sort_dictionary(book_text)
@@ -22,6 +23,7 @@ def construct_report(book_path, book_text):
     for character in character_list:
         print(f"{character[0]}: {character[1]}")
     print("--- End report ---")
+
 
 def sort_dictionary(book_text):
     unsorted_dict = count_letters(book_text)
@@ -34,11 +36,10 @@ def sort_dictionary(book_text):
     return alpha_sorted_list
 
 
-
-
-def  read_the_book(book):
+def read_the_book(book):
     with open(book) as f:
         file_contents = f.read()
         return file_contents
+
 
 main()
